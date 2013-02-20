@@ -1,5 +1,5 @@
 {
-    "name": "gracenote/gracenote-tha",
+    "name": "gracenote/gracenote",
     "description": "A PHP library for abstracting the Gracenote API",
     "type": "library",
     "license": "MIT",
