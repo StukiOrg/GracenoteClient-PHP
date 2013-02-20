@@ -8,7 +8,7 @@ Installation
 
      ```json
      "require": {
-        "gracenote/gracenote-tha": "dev-master"
+        "gracenote/gracenote": "dev-master"
      }
      ```
   2. install composer via `curl -s http://getcomposer.org/installer | php` (on windows, download
