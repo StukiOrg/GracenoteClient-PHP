@@ -123,7 +123,8 @@ final class Gracenote {
             switch ($key) {
                 case 'parameters':
                     foreach ($val as $parameter => $value) {
-                        $param = $query->addChild('TEXT', $value);
+                        $param = $query->addChild('TEXT');
+                        $param->{0} = $value;
                         $param->addAttribute('TYPE', $parameter);
                     }
                     break;
@@ -131,8 +132,10 @@ final class Gracenote {
                 case 'options':
                     foreach ($val as $parameter => $value) {
                         $option = $query->addChild('OPTION');
-                        $option->addChild('PARAMETER', $parameter);
-                        $option->addChild('VALUE', $value);
+                        $param = $option->addChild('PARAMETER');
+                        $param->{0} = $parameter;
+                        $value = $option->addChild('VALUE');
+                        $value->{0} = $value;
                     }
                     break;
 
