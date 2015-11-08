@@ -107,6 +107,9 @@ final class Gracenote {
 
         $http = new Client();
 
+        // Gracenote can be slow at times, set timeout to 2 minutes.
+        $http->setOptions(['timeout' => 120]);
+
         $xml = new \SimpleXmlElement('<QUERIES></QUERIES>');
         $xml->addChild('LANG', self::getLanguage());
         $xml->addChild('COUNTRY', self::getCountry());
